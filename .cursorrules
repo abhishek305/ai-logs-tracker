@@ -1,0 +1,39 @@
+# AI Work Journal Project Rules
+
+## Architecture Rules
+- Always define TypeScript types before implementing steps.
+- Never chain Mastra steps without typed input/output.
+- Enforce strict JSON schema in all LLM steps.
+- Never allow free-text LLM outputs.
+- Always validate schema.
+
+## Prompt Engineering Rules
+- Responses must be JSON only.
+- No markdown formatting.
+- No explanations outside JSON.
+- Keep outputs concise and structured.
+
+## Skill Mapping Rules
+- Only use predefined taxonomy.
+- Never invent new skill categories.
+
+## Engineering Quality
+- Prefer pure functions for utilities.
+- Keep LLM logic separate from business logic.
+- No hardcoded file paths outside config.
+- Handle file existence safely in Excel writer.
+- Always add error handling for workflow execution.
+
+## CLI Layer
+- CLI should remain thin.
+- All logic must live in workflow/steps.
+- CLI should only collect input and call workflow.
+
+## Refactoring Rules
+- Never modify multiple steps at once.
+- Refactor incrementally.
+- Keep prompts readable and deterministic.
+
+## Performance
+- Keep prompts short but structured.
+- Avoid overloading context.

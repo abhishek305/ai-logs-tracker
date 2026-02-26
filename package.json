@@ -1,0 +1,28 @@
+{
+  "name": "daily-tracker",
+  "version": "1.0.0",
+  "description": "AI-powered work journal system with structured classification, impact expansion, and skill mapping",
+  "type": "module",
+  "bin": {
+    "journal": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/cli/index.ts",
+    "build": "tsc",
+    "start": "node dist/cli/index.js"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.0.0",
+    "@mastra/core": "^0.10.0",
+    "commander": "^13.0.0",
+    "dotenv": "^16.4.0",
+    "exceljs": "^4.4.0",
+    "ollama-ai-provider": "^1.2.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
